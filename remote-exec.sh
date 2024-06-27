@@ -68,8 +68,6 @@ services:
     ports:
       - "$backend_port:8080"
     container_name: backend
-    environment:
-      - "MONGODB_URI"=$MONGODB_URI
 EOL
 sudo docker compose --file /tmp/docker-compose.yml up -d
 sudo nginx -t
