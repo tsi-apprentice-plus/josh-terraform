@@ -59,12 +59,12 @@ sudo ln -s /etc/nginx/sites-available/api.$my_name.netbuildertraining.com /etc/n
 cat <<EOL > /tmp/docker-compose.yml
 services:
   frontend:
-    image: ghcr.io/asharubendy/aamirah-frontend:prod
+    image: ghcr.io/asharubendy/josh-frontend:prod
     ports:
       - "$frontend_port:3000"
     container_name: frontend
   backend:
-    image: ghcr.io/aamirahp/backend:latest
+    image: ghcr.io/incogzino/build-backend:latest
     ports:
       - "$backend_port:8080"
     container_name: backend
